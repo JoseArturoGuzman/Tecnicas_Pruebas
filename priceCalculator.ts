@@ -6,7 +6,5 @@ export function calculateFinalPrice(
     throw new Error("Invalid input");
   }
 
-  return Number(
-    (originalPrice - originalPrice * (discountPercentage / 100)).toFixed(2)
-  );
+  return originalPrice - originalPrice * (discountPercentage / 100);
 }

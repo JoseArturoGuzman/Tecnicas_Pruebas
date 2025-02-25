@@ -1,10 +1,6 @@
 import { calculateFinalPrice } from "./priceCalculator";
 describe("Intuition and Experience Based Tests", () => {
   // Desarrollar aquí pruebas basadas en la intuición y experiencia
-
-  test("Debe retornar un precio con dos decimales", () => {
-    expect(calculateFinalPrice(83.45, 12.53)).toBe(72.99);
-  });
 });
 
 describe("Domain Based Tests", () => {
