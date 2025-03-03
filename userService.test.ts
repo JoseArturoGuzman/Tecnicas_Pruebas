@@ -37,7 +37,7 @@ test('Debe no dejar autenticar a un usuario que no se haya registrado', () => {
     expect(authenticate('usuarioNoNuevo', 'Consentraseñatest')).toBe(false);
 });
 
-test('Se debe poder bloquear a un usuario', () => {
+test('Se puede bloquear a los usuarios registrados', () => {
     register('usuarioPrueba', 'contraseña123');
     blockUser('usuarioPrueba');
     expect(authenticate('usuarioPrueba', 'contraseña123')).toBe(false);
