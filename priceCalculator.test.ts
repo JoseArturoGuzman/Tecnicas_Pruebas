@@ -1,6 +1,18 @@
 import { calculateFinalPrice } from "./priceCalculator";
 describe("Intuition and Experience Based Tests", () => {
   // Desarrollar aquí pruebas basadas en la intuición y experiencia
+
+  test("Descuento de 0% debe dar el mismo precio", () => {
+    expect(calculateFinalPrice(112, 0)).toBe(112);
+  });
+
+  test("Descuento de 100% debe dar precio 0", () => {
+    expect(calculateFinalPrice(112, 100)).toBe(0);
+  });
+
+  test("Debe retonar un precio con dos decimales", () => {
+    expect(calculateFinalPrice(25, 50)).toBe(12.5);
+  });
 });
 
 describe("Domain Based Tests", () => {
